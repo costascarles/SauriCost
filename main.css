@@ -2,29 +2,6 @@ body{
 	
 	max-height: auto;
 	max-width: 100%;
-	background:  linear-gradient(to right, black, #8c8c8c);
-	color: white;
- }
- header{
- 	max-width: 100%;
- 	max-height: auto;
- 	text-align: center;
- 	padding: 2em;
- 	margin: 2em;
- }
- section {
- 	max-width: 100%;
- 	max-height: auto;
- 	text-align: center;
- 	padding: 2em;
- 	margin: 2em;
- }
- form{
- 	max-width: 100%;
- 	max-height: auto;
- 	text-align: center;
- 	padding: 1em;
- 	margin: 1em;
- }
-
- 
+	 background:  linear-gradient(to right, black, #8c8c8c);
+	 color: white;
+}
