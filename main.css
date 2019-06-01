@@ -63,7 +63,6 @@ form {
 	font-size: 15px;
 	margin: 0;
 	outline: 0;
-	padding: 10px;
 	width: 100%;
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
@@ -73,6 +72,10 @@ form {
 	-webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
 	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
 	margin-bottom: 30px;
+}
+
+.form-style-5 select{
+	height: auto;
 }
 
 #terms {
@@ -235,6 +238,8 @@ html {
   background: #c0c0c0;
 }
 div.browser {
+	position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
   background: #fff url(http://www.s4c.cymru/temp/unsplash-kitsune-4.jpg) no-repeat;
   background-size: cover;
   border-bottom-right-radius: 4px;
@@ -244,13 +249,12 @@ div.browser {
   font-family: 'Source Sans Pro', helvetica;
   overflow: hidden;
   letter-spacing: -0.05em;
-  margin: 5% auto;
-  max-width: 1200px;
-  min-width: 320px;
-  min-height: 600px;
+  max-width: 90%;
+  min-width: 90%;
+  min-height: 100%;
   padding-bottom: 10%;
   position: relative;
-  width: 90%;
+  margin: auto;
 }
 div.browser div.chrome {
   background: #4f585e;
