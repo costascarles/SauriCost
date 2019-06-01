@@ -11,6 +11,7 @@ if (!$enlace) {
 
  $username=htmlspecialchars($_GET["username"]);
 $password=htmlspecialchars($_GET["password"]);
+
 $repassword=htmlspecialchars($_GET["repassword"]);
 $email=htmlspecialchars($_GET["email"]);
 $firstname=htmlspecialchars($_GET["firstname"]);

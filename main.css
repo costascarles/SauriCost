@@ -1,7 +1,7 @@
 body {
 	max-height: auto;
 	max-width: 100%;
-	background: linear-gradient(to right, black, #8c8c8c);
+	background: #c0c0c0;
 }
 
 header {
@@ -134,6 +134,7 @@ form {
 	border: 1px solid #16a085;
 	border-width: 1px 1px 3px;
 	margin-bottom: 10px;
+	border-radius: 10px;
 }
 
 .form-style-5 input[type="submit"]:hover,
@@ -192,4 +193,180 @@ form {
   .header-right {
     float: none;
   }
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 200;
+  src: local('Source Sans Pro ExtraLight'), local('SourceSansPro-ExtraLight'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xKydSBYKcSV-LCoeQqfX1RYOo3i94_wlxdr.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Source Sans Pro Light'), local('SourceSansPro-Light'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwlxdr.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xK3dSBYKcSV-LCoeQqfX1RYOo3qOK7g.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Source Sans Pro SemiBold'), local('SourceSansPro-SemiBold'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwlxdr.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Source Sans Pro Bold'), local('SourceSansPro-Bold'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwlxdr.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Source Sans Pro Black'), local('SourceSansPro-Black'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xKydSBYKcSV-LCoeQqfX1RYOo3iu4nwlxdr.ttf) format('truetype');
+}
+html {
+  background: #c0c0c0;
+}
+div.browser {
+  background: #fff url(http://www.s4c.cymru/temp/unsplash-kitsune-4.jpg) no-repeat;
+  background-size: cover;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.4), 0 12px 24px -6px rgba(0, 0, 0, 0.4), 0 24px 64px 12px rgba(0, 0, 0, 0.25);
+  color: #323b40;
+  font-family: 'Source Sans Pro', helvetica;
+  overflow: hidden;
+  letter-spacing: -0.05em;
+  margin: 5% auto;
+  max-width: 1200px;
+  min-width: 320px;
+  min-height: 600px;
+  padding-bottom: 10%;
+  position: relative;
+  width: 90%;
+}
+div.browser div.chrome {
+  background: #4f585e;
+  height: 40px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+div.browser div.chrome > a {
+  border-radius: 12px;
+  display: block;
+  float: left;
+  height: 12px;
+  margin: 13px 4px;
+  width: 12px;
+}
+div.browser div.chrome > a:first-child {
+  margin-left: 13px;
+}
+div.browser div.chrome > a.red {
+  background: #fc625c;
+}
+div.browser div.chrome > a.amber {
+  background: #fdbc40;
+}
+div.browser div.chrome > a.green {
+  background: #34c748;
+}
+div.browser div.chrome div.url {
+  background: #5f676d;
+  border-radius: 4px;
+  height: 24px;
+  left: 50%;
+  position: absolute;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: 8px;
+  width: 70%;
+}
+div.browser h1 {
+  font-size: 24px;
+  font-weight: 200;
+  margin: 0;
+  padding: 80px 40px 10px;
+}
+div.browser h2 {
+  font-size: 48px;
+  line-height: 1em;
+  max-width: 16em;
+  margin: 0;
+  padding: 0 40px;
+}
+footer {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+}
+footer div.social-media-links {
+  background: #323b40;
+  overflow: hidden;
+  padding-bottom: 4px;
+  text-align: center;
+}
+footer div.social-media-links ul {
+  margin: 0;
+  padding: 0;
+}
+footer div.social-media-links li {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+footer div.social-media-links a {
+  border-bottom: 0px solid rgba(0, 0, 0, 0.95);
+  border-radius: 4px;
+  box-shadow: inset 0 -3px 0 0 rgba(0, 0, 0, 0), 0 6px 8px rgba(0, 0, 0, 0), 0 24px 24px rgba(0, 0, 0, 0), 0 36px 36px rgba(0, 0, 0, 0), 0 64px 64px rgba(0, 0, 0, 0), 0 64px 128px rgba(0, 0, 0, 0), 0 120px 0 rgba(0, 0, 0, 0), 0 86px 8px 6px rgba(0, 0, 0, 0);
+  display: inline-block;
+  height: 30px;
+  padding: 20px;
+  position: relative;
+  transition: 0.2s ease-in;
+  width: 30px;
+}
+footer div.social-media-links a svg {
+  left: 20px;
+  position: absolute;
+  top: 20px;
+  height: 30px;
+  width: 30px;
+}
+footer div.social-media-links a svg.glow path,
+footer div.social-media-links a svg.glow circle {
+  fill: rgba(0, 0, 0, 0);
+}
+footer div.social-media-links a svg path,
+footer div.social-media-links a svg circle {
+  fill: #0096a1;
+  transition: 0.2s ease-in;
+}
+footer div.social-media-links a:hover {
+  -webkit-transform: translateY(-4px);
+          transform: translateY(-4px);
+  box-shadow: inset 0 -3px 0 0 rgba(0, 0, 0, 0.1), 0 6px 8px rgba(0, 0, 0, 0.05), 0 24px 24px rgba(0, 0, 0, 0.05), 0 36px 36px rgba(0, 0, 0, 0.05), 0 64px 64px rgba(0, 0, 0, 0.15), 0 64px 128px rgba(0, 0, 0, 0.15), 0 86px 8px 6px rgba(14, 186, 199, 0.25), 0 83px 4px 0px rgba(14, 186, 199, 0.95);
+}
+footer div.social-media-links a:hover svg.glow {
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><f…ter id="filter"><feGaussianBlur stdDeviation="10" /></filter></svg>#filter');
+  -webkit-filter: blur(2px);
+          filter: blur(2px);
+}
+footer div.social-media-links a:hover svg.glow path,
+footer div.social-media-links a:hover svg.glow circle {
+  fill: rgba(14, 186, 199, 0.6);
+}
+footer div.social-media-links a:hover svg path,
+footer div.social-media-links a:hover svg circle {
+  fill: #0ebac7;
 }
