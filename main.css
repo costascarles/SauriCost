@@ -74,6 +74,13 @@ form {
 	margin-bottom: 30px;
 }
 
+.form-style-5 input[type="text"],
+.form-style-5 input[type="password"]{
+
+padding: 10px;
+
+}
+
 .form-style-5 select{
 	height: auto;
 }
