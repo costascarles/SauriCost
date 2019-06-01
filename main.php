@@ -9,8 +9,22 @@ if (!$enlace) {
     exit;
 }
 
-echo "Éxito: Se realizó una conexión apropiada a MySQL! La base de datos mi_bd es genial." . PHP_EOL;
-echo "Información del host: " . mysqli_get_host_info($enlace) . PHP_EOL;
+ $username=htmlspecialchars($_GET["username"]);
+$password=htmlspecialchars($_GET["password"]);
+$repassword=htmlspecialchars($_GET["repassword"]);
+$email=htmlspecialchars($_GET["email"]);
+$firstname=htmlspecialchars($_GET["firstname"]);
+$lastname=htmlspecialchars($_GET["lastname"]);
 
+$consulta = "INSERT INTO users (User,Password,Email,Nombre,Apellido) VALUES ('$username','$password','$email','$firstname','$lastname');";
+    // Crear una declaración 
+    $stmt = $enlace->prepare($consulta);
+ 
+// Añadimos una condicional para la insercion de registros	
+if ($enlace->query($consulta) === TRUE) {
+    echo "Nuevo registro creado";
+} else {
+    echo "Error: " . $consulta . "<br>" . $enlace->error;
+}
 mysqli_close($enlace);
 ?>

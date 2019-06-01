@@ -23,11 +23,11 @@
       </header>
       <section>
          <div class="form-style-5">
-            <form id="loginform">
+            <form id="loginform" >
                <fieldset>
                   <legend><span class="number">1</span> Login Details</legend>
-                  <input type="text" name="field1" placeholder="User Name ">
-                  <input type="Password" name="field2" placeholder="Password">
+                  <input type="text" name="username" placeholder="User Name " autofocus="true">
+                  <input type="Password" name="password" placeholder="Password">
                   <select name="action" onchange="quitSignIn()">
                      <optgroup label="Action">
                         <option value="in">Sign In</option>
@@ -35,16 +35,16 @@
                      </optgroup>
                   </select>
                </fieldset>
-               <input type="submit" value="Submit" autofocus="true">
+               <input type="submit" value="Submit">
             </form>
-            <form id="signupform" style="display: none;">
+            <form id="signupform" style="display: none;" action="main.php">
                <fieldset>
                   <legend><span class="number">1</span> Signup Details</legend>
-                  <input class="campo" type="text" name="username" placeholder="User">
+                  <input class="campo" type="text" name="username" placeholder="User" autofocus="true">
                   <input class="campo" type="Password" name="password" placeholder="Password">
                   <input class="campo" type="Password" name="repassword" placeholder="RePassword">
                   <input class="campo" type="text" name="email" placeholder="Email">
-                  <input class="campo" type="text" name="fistname" placeholder="Name">
+                  <input class="campo" type="text" name="firstname" placeholder="Name">
                   <input class="campo" type="text" name="lastname" placeholder="Surname">
                   <select name="action" onchange="quitSignUp()">
                      <optgroup label="Action">
@@ -54,7 +54,7 @@
                   </select>
                   <div id="terms"><input class="campo" type="checkbox" > I Agree <a href="https://www.linkeng.com/en/terms-conditions" target="blank">Terms & Coditions</a></div>
                </fieldset>
-               <input type="submit" value="Submit" autofocus="true">
+               <input type="submit" value="Submit">
             </form>
          </div>
       </section>
