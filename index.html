@@ -31,11 +31,11 @@
       </header>
       <section>
          <div class="form-style-5">
-            <form id="loginform">
+            <form id="loginform" action="login.php">
                <fieldset>
                   <legend><span class="number">1</span> Login Details</legend>
-                  <input type="text" id="userlogin" placeholder="User Name " autofocus="true">
-                  <input type="Password" id="passlogin" placeholder="Password">
+                  <input type="text" name="userlogin" id="userlogin" placeholder="User Name " autofocus="true">
+                  <input type="Password" name="passlogin" id="passlogin" placeholder="Password">
                   <select name="action" onchange="quitSignIn()">
                      <optgroup label="Action">
                         <option value="in" selected>Sign In</option>
@@ -43,17 +43,17 @@
                      </optgroup>
                   </select>
                </fieldset>
-               <input type="submit" value="Submit">
+               <input type="submit" value="Submit" id="loginbtn" name="loginbtn">
             </form>
             <form id="signupform" style="display: none;" action="signup.php" onsubmit="return validateForm()" onchange="return returnForm()">
                <fieldset>
                   <legend><span class="number">1</span> Signup Details</legend>
-                  <input class="campo" type="text" id="username" placeholder="Username">
-                  <input class="campo" type="Password" id="password" placeholder="Password">
-                  <input class="campo" type="Password" id="repassword" placeholder="RePassword">
-                  <input class="campo" type="text" id="email" placeholder="Email">
-                  <input class="campo" type="text" id="firstname" placeholder="Name">
-                  <input class="campo" type="text" id="lastname" placeholder="Surname">
+                  <input class="campo" type="text" name="username" id="username" placeholder="Username">
+                  <input class="campo" type="Password" name="password" id="password" placeholder="Password">
+                  <input class="campo" type="Password" name="repassword" id="repassword" placeholder="RePassword">
+                  <input class="campo" type="text" name="email" id="email" placeholder="Email">
+                  <input class="campo" type="text" name="firstname" id="firstname" placeholder="Name">
+                  <input class="campo" type="text" name="lastname" id="lastname" placeholder="Surname">
                   <select name="action" onchange="quitSignUp()">
                      <optgroup label="Action">
                         <option value="in">Sign In</option>
@@ -130,6 +130,7 @@
          	lform.style.display="none";
          	sform.style.display="block";
 			document.getElementById("username").focus();
+			document.getElementById("selectup").value = "up";
          }
          
          function quitSignUp(){
@@ -140,7 +141,8 @@
          	sform.style.display="none";
          	lform.style.display="block";
 			document.getElementById("userlogin").focus();
-         }
+			document.getElementById("selectin").value = "in";
+		 }
 
          function validateForm(){
           var value=true;
