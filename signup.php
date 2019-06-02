@@ -10,9 +10,8 @@ if (!$enlace) {
 }
 
  $username=htmlspecialchars($_GET["username"]);
-$password=htmlspecialchars($_GET["password"]);
-
-$repassword=htmlspecialchars($_GET["repassword"]);
+$password=md5(htmlspecialchars($_GET["password"]));
+$repassword=md5(htmlspecialchars($_GET["repassword"]));
 $email=htmlspecialchars($_GET["email"]);
 $firstname=htmlspecialchars($_GET["firstname"]);
 $lastname=htmlspecialchars($_GET["lastname"]);
