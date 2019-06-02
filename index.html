@@ -45,14 +45,14 @@
                </fieldset>
                <input type="submit" value="Submit">
             </form>
-            <form id="signupform" style="display: none;" action="signup.php">
+            <form id="signupform" style="display: none;" action="signup.php" onsubmit="return validateForm()" onchange="return returnForm()">
                <fieldset>
                   <legend><span class="number">1</span> Signup Details</legend>
                   <input class="campo" type="text" id="username" placeholder="Username">
                   <input class="campo" type="Password" id="password" placeholder="Password">
                   <input class="campo" type="Password" id="repassword" placeholder="RePassword">
                   <input class="campo" type="text" id="email" placeholder="Email">
-                  <input class="campo" type="text" id="fistname" placeholder="Name">
+                  <input class="campo" type="text" id="firstname" placeholder="Name">
                   <input class="campo" type="text" id="lastname" placeholder="Surname">
                   <select name="action" onchange="quitSignUp()">
                      <optgroup label="Action">
@@ -140,6 +140,60 @@
          	sform.style.display="none";
          	lform.style.display="block";
 			document.getElementById("userlogin").focus();
+         }
+
+         function validateForm(){
+          var value=true;
+          var username = document.forms["signupform"]["username"].value;
+          var password = document.forms["signupform"]["password"].value;
+          var repassword = document.forms["signupform"]["repassword"].value;
+          var email = document.forms["signupform"]["email"].value;
+          var firstname = document.forms["signupform"]["firstname"].value;
+          var lastname = document.forms["signupform"]["lastname"].value;
+          if (username == "") {            
+              document.getElementById('username').style.border = "2px solid red";
+              
+              value=false;
+            } if (password == "") {            
+              document.getElementById('password').style.border = "2px solid red";
+              value=false;
+            } if (repassword == "") {            
+              document.getElementById('repassword').style.border = "2px solid red";
+             value= false;
+            }if (email == "") {            
+              document.getElementById('email').style.border = "2px solid red";
+             value= false;
+            }if (firstname == "") {            
+              document.getElementById('firstname').style.border = "2px solid red";
+             value= false;
+            } if (lastname == "") {            
+              document.getElementById('lastname').style.border = "2px solid red";
+              value=false;
+            }return value;
+
+         }
+         function returnForm(){
+          var username = document.forms["signupform"]["username"].value;
+          var password = document.forms["signupform"]["password"].value;
+          var password = document.forms["signupform"]["repassword"].value;
+          var email = document.forms["signupform"]["email"].value;
+          var firstname = document.forms["signupform"]["firstname"].value;
+          var lastname = document.forms["signupform"]["lastname"].value
+          if (username != ""  ) {            
+              document.getElementById('username').style.border = "none";                    
+             }
+             if (password != "") {            
+               document.getElementById('password').style.border = "none";  
+            } if (repassword != "") {            
+              document.getElementById('repassword').style.border = "none";  
+            }if (email != "") {            
+               document.getElementById('email').style.border = "none";  
+            }if (firstname != "") {            
+               document.getElementById('firstname').style.border = "none";  
+            } if (lastname != "") {            
+              document.getElementById('lastname').style.border = "none";  
+            }
+
          }
       </script>
    </body>
