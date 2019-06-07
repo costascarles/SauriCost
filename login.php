@@ -3,7 +3,7 @@ $newURL='hub.html';
 
 	if(isset($_POST["loginbtn"])) {
  
-		$enlace = mysqli_connect("127.0.0.1", "root","", "segcost");
+$enlace = mysqli_connect("remotemysql.com", "qRqbwVn75h","QNRV7W1eUM", "qRqbwVn75h", "3306");
  
 			$loginNombre = $_POST["userlogin"];
 			$loginPassword = md5($_POST["passlogin"]);
