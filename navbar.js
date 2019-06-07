@@ -1,0 +1,1 @@
+document.write('<nav> <div class="nav"> <a href="#default" class="logo">LOGO DE LA WEB</a> <div class="nav-right"> <a class="active" href="#home">Home</a> <a href="#earn">Earn Money</a> <a href="#contact">Contact</a> <a href="#about">About Us</a> </div></div></nav>')

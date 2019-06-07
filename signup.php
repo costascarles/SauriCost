@@ -1,6 +1,6 @@
-
 <?php
-$enlace = mysqli_connect("127.0.0.1", "root","", "segcost");
+
+$enlace = mysqli_connect("remotemysql.com", "qRqbwVn75h","QNRV7W1eUM", "qRqbwVn75h", "3306");
 
 if (!$enlace) {
     echo "Error: No se pudo conectar a MySQL." . PHP_EOL;
@@ -16,7 +16,7 @@ $email=htmlspecialchars($_GET["email"]);
 $firstname=htmlspecialchars($_GET["firstname"]);
 $lastname=htmlspecialchars($_GET["lastname"]);
 
-$consulta = "INSERT INTO users (User,Password,Email,Nombre,Apellido) VALUES ('$username','$password','$email','$firstname','$lastname');";
+$consulta = "INSERT INTO users (User,Password,Email,Nombre,Apellido,FechaNacimiento,Sexo,Dni,Direccion,Ciudad,CodigoPostal,Pais) VALUES ('$username','$password','$email','$firstname','$lastname',now(),'Poco','dniTest','caca','pene','69','l');";
     // Crear una declaración 
     $stmt = $enlace->prepare($consulta);
  
