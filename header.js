@@ -1,2 +1,2 @@
- document.write('<header>  <div class="chrome">    <a href="#" class="red"></a>    <a href="#" class="amber"></a>    <a href="#" class="green"></a>    <div class="url"></div>  </div></header>');
+ document.write('<header>  <div class="chrome">    <button onClick="closeTab()" class="red"></button>    <button onClick="MINIMIZE!!!()" class="amber"></button>    <button onClick="RESIZE" class="green"></button>    <div class="url"></div>  </div></header> <script> function closeTab(){ var i, tabcontent; tabcontent = document.getElementsByClassName("tabcontent");  for (i = 0; i < tabcontent.length; i++) { tabcontent[i].style.display = "none";}}</script>');
  

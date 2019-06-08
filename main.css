@@ -286,24 +286,25 @@ div.browser div.chrome {
   right: 0;
   top: 0;
 }
-div.browser div.chrome > a {
-  border-radius: 12px;
+div.browser div.chrome > button {
+  border-radius: 17px;
   display: block;
   float: left;
   height: 12px;
   margin: 13px 4px;
   width: 12px;
+  border:none;
 }
-div.browser div.chrome > a:first-child {
+div.browser div.chrome > button:first-child {
   margin-left: 13px;
 }
-div.browser div.chrome > a.red {
+div.browser div.chrome > button.red {
   background: #fc625c;
 }
-div.browser div.chrome > a.amber {
+div.browser div.chrome > button.amber {
   background: #fdbc40;
 }
-div.browser div.chrome > a.green {
+div.browser div.chrome > button.green {
   background: #34c748;
 }
 div.browser div.chrome div.url {
@@ -395,4 +396,42 @@ footer div.social-media-links a:hover svg.glow circle {
 footer div.social-media-links a:hover svg path,
 footer div.social-media-links a:hover svg circle {
   fill: #0ebac7;
+}
+
+/* Style the tab */
+.tab {
+  position:absolute;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+	position: absolute;
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
 }
