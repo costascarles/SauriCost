@@ -44,7 +44,7 @@ $consulta3 = "SELECT table_name FROM information_schema.tables where table_schem
 	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="description" content="Plantilla">
       <meta name="keywords" content="HTML,CSS,PHP,SQL,Palntilla">
-      <meta name="author" content="Costas Carles & Jordi Plà">
+      <meta name="author" content="Costas Carles & Plà Jordi">
    </head>
    <body>
    	 <div class="browser">
@@ -52,7 +52,7 @@ $consulta3 = "SELECT table_name FROM information_schema.tables where table_schem
       <script src="navbar.js"></script>
       <section>
         <div class="form-style-5">
-      <form>
+<form action="varpasser.php">
 <select name="action" >
   <optgroup label="Action" id="act">
   <script type="text/javascript">                
@@ -62,14 +62,21 @@ $consulta3 = "SELECT table_name FROM information_schema.tables where table_schem
              opt.innerHTML = tables[i];
             document.getElementsByTagName('optgroup')[0].appendChild(opt);
           }
+        
   </script>
 </optgroup>
   </select>
+  <input type="submit" value="Refresh">
+</form>
+  <form>
         <?php
 include "connectDB.php";
+if(isset($_GET["action"])){$table=$_GET["action"];}else{$table="oferts";}
 
-$consulta = "SELECT count(*) FROM information_schema.columns WHERE table_name = 'users'";
-$consulta2 = "SELECT COLUMN_NAME FROM information_schema.columns WHERE table_name = 'users'";
+
+$consulta = "SELECT count(*) FROM information_schema.columns WHERE table_name = '$table'";
+$consulta2 = "SELECT COLUMN_NAME FROM information_schema.columns WHERE table_name = '$table'";
+echo $table;
  echo '<script>';
  echo 'var colNames=new Array();';
  echo '</script>';
