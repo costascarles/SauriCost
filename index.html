@@ -44,7 +44,7 @@
                         <option value="up" selected>Sign Up</option>
                      </optgroup>
                   </select>
-                  <div id="terms"><input class="campo" type="checkbox" > I Agree <a href="https://www.linkeng.com/en/terms-conditions" target="blank">Terms & Coditions</a></div>
+                  <div id="terms"><input class="campo" type="checkbox" name="termsch" id="termsch"> I Agree <a href="https://www.linkeng.com/en/terms-conditions" target="blank">Terms & Coditions</a></div>
                </fieldset>
                <input type="submit" value="Submit">
             </form>
@@ -83,6 +83,8 @@
           var email = document.forms["signupform"]["email"].value;
           var firstname = document.forms["signupform"]["firstname"].value;
           var lastname = document.forms["signupform"]["lastname"].value;
+          var terms = document.forms["signupform"]["termsch"].value;
+
           if (username == "") {            
               document.getElementById('username').style.border = "2px solid red";
               
@@ -102,16 +104,26 @@
             } if (lastname == "") {            
               document.getElementById('lastname').style.border = "2px solid red";
               value=false;
-            }return value;
+            } if(password!=repassword){
+               document.getElementById('password').style.border = "2px solid red";
+              document.getElementById('repassword').style.border = "2px solid red";
+              value=false;
+            }
+            if(!document.getElementById('termsch').checked){
+              document.getElementById('termsch').style.border = "2px solid red";
+              value=false;
+            }
+            return value;
 
          }
          function returnForm(){
           var username = document.forms["signupform"]["username"].value;
           var password = document.forms["signupform"]["password"].value;
-          var password = document.forms["signupform"]["repassword"].value;
+          var repassword = document.forms["signupform"]["repassword"].value;
           var email = document.forms["signupform"]["email"].value;
           var firstname = document.forms["signupform"]["firstname"].value;
           var lastname = document.forms["signupform"]["lastname"].value
+          //var terms = document.forms["signupform"]["termsch"].value;
           if (username != ""  ) {            
               document.getElementById('username').style.border = "none";                    
              }
@@ -125,6 +137,12 @@
                document.getElementById('firstname').style.border = "none";  
             } if (lastname != "") {            
               document.getElementById('lastname').style.border = "none";  
+            }if(password==repassword){
+              document.getElementById('password').style.border = "none"; 
+              document.getElementById('repassword').style.border = "none";
+            }
+            if(document.getElementById('termsch').checked){
+               document.getElementById('termsch').style.border = "none";
             }
 
          }
