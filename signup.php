@@ -6,7 +6,7 @@ $repassword=md5(htmlspecialchars($_GET["repassword"]));
 $email=htmlspecialchars($_GET["email"]);
 $firstname=htmlspecialchars($_GET["firstname"]);
 $lastname=htmlspecialchars($_GET["lastname"]);
-if($password==$repassword){
+
 include 'connectDB.php';
 $consulta = "INSERT INTO users (User,Password,Email,Nombre,Apellido) VALUES ('$username','$password','$email','$firstname','$lastname');";
     // Crear una declaración 
@@ -21,7 +21,5 @@ if ($enlace->query($consulta) === TRUE) {
    Header("Location: index.html?error=registry");
 }
 mysqli_close($enlace);
-}else{
-	header('Location: ' . $_SERVER['HTTP_REFERER']);
-}
+
 ?>
