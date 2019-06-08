@@ -1,5 +1,74 @@
 <?php
 include "connectDB.php";
+$consulta4 = "SELECT count(*) FROM information_schema.tables where table_schema='qRqbwVn75h';";
+$consulta3 = "SELECT table_name FROM information_schema.tables where table_schema='qRqbwVn75h';";
+ echo '<script>';
+ echo 'var tables=new Array();';
+ echo '</script>';
+  if($resultado = $enlace->query($consulta4)) {
+  
+        while($row = $resultado->fetch_array()) {
+ 
+          $tablenum = $row[0];
+         echo json_encode($tablenum);
+        echo '<script>';
+        echo 'var tablenum = ' . json_encode($tablenum) . ';';
+        echo '</script>';
+        }
+        $resultado->close();
+      }
+      if($resultado = $enlace->query($consulta3)) {
+  
+        while($row = $resultado->fetch_array()) {
+ 
+          $tables = $row[0];
+         echo json_encode($tables)."<br>";
+        
+        echo '<script>';
+       
+        echo 'tables.push(' . json_encode($tables) . ');';
+        echo '</script>';
+        }
+        $resultado->close();
+      }
+      $enlace->close();
+ 
+
+?>
+<!DOCTYPE html>
+<html>
+   <head>
+      <title></title>
+      <link rel="stylesheet" type="text/css" href="main.css">
+      <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Plantilla">
+      <meta name="keywords" content="HTML,CSS,PHP,SQL,Palntilla">
+      <meta name="author" content="Costas Carles & Jordi Plà">
+   </head>
+   <body>
+   	 <div class="browser">
+       <script src="header.js"></script>
+      <script src="navbar.js"></script>
+      <section>
+        <div class="form-style-5">
+      <form>
+<select name="action" >
+  <optgroup label="Action" id="act">
+  <script type="text/javascript">                
+      for(var i=0;i<tablenum;i++){
+        alert(tables[0])
+            var opt = document.createElement("option"); //input element, text
+            opt.value = tables[0];
+             opt.innerHTML = tables[0];
+            document.getElementsByTagName('optgroup')[0].appendChild(opt);
+          }
+  </script>
+</optgroup>
+  </select>
+        <?php
+include "connectDB.php";
+
 $consulta = "SELECT count(*) FROM information_schema.columns WHERE table_name = 'users'";
 $consulta2 = "SELECT COLUMN_NAME FROM information_schema.columns WHERE table_name = 'users'";
  echo '<script>';
@@ -35,24 +104,6 @@ $consulta2 = "SELECT COLUMN_NAME FROM information_schema.columns WHERE table_nam
  
 
 ?>
-<!DOCTYPE html>
-<html>
-   <head>
-      <title></title>
-      <link rel="stylesheet" type="text/css" href="main.css">
-      <meta charset="UTF-8">
-	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="description" content="Plantilla">
-      <meta name="keywords" content="HTML,CSS,PHP,SQL,Palntilla">
-      <meta name="author" content="Costas Carles & Jordi Plà">
-   </head>
-   <body>
-   	 <div class="browser">
-       <script src="header.js"></script>
-      <script src="navbar.js"></script>
-      <section>
-        <div class="form-style-5">
-      <form>
         <script type="text/javascript"> 
               
           for(var i=0;i<col;i++){
