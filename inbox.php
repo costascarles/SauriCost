@@ -10,7 +10,7 @@ $consulta3 = "SELECT table_name FROM information_schema.tables where table_schem
         while($row = $resultado->fetch_array()) {
  
           $tablenum = $row[0];
-         echo json_encode($tablenum);
+        // echo json_encode($tablenum);
         echo '<script>';
         echo 'var tablenum = ' . json_encode($tablenum) . ';';
         echo '</script>';
@@ -22,7 +22,7 @@ $consulta3 = "SELECT table_name FROM information_schema.tables where table_schem
         while($row = $resultado->fetch_array()) {
  
           $tables = $row[0];
-         echo json_encode($tables)."<br>";
+       //  echo json_encode($tables)."<br>";
         
         echo '<script>';
        
@@ -57,10 +57,9 @@ $consulta3 = "SELECT table_name FROM information_schema.tables where table_schem
   <optgroup label="Action" id="act">
   <script type="text/javascript">                
       for(var i=0;i<tablenum;i++){
-        alert(tables[0])
             var opt = document.createElement("option"); //input element, text
-            opt.value = tables[0];
-             opt.innerHTML = tables[0];
+            opt.value = tables[i];
+             opt.innerHTML = tables[i];
             document.getElementsByTagName('optgroup')[0].appendChild(opt);
           }
   </script>
